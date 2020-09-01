@@ -1,0 +1,25 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+  "name": "StressLoop",
+  "version": "0.0.5",
+  "manifest_version": 2,
+  "description": "StressLoop, the internet destroyer!",
+  "homepage_url": "http://www.unusualnorm.com/",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": [
+        "js/jquery/jquery.min.js",
+        "js/jquery/jquery.typetype.min.js",
+        "src/inject/inject.js"
+      ]
+    }
+  ]
+}
