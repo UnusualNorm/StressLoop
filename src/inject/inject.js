@@ -10,7 +10,7 @@ chrome.extension.sendMessage({}, function(response) {
 					if ($("td.green").length) {
 						setTimeout(() => {
 							location.reload();
-						}, 5000);
+						}, 10000);
 					} else {
 						$("[name|=\"host\"]").typetype(urlParams.get("ip"), {
 							e: 0,
