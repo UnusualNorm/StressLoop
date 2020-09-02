@@ -46,8 +46,8 @@ chrome.extension.sendMessage({}, function(response) {
 								$(".jssubmit").click();	
 								setTimeout(() => {
 									location.reload();
-								}, 1000);
-							}, 1000);
+								}, response.startDelay);
+							}, response.clickDelay);
 						}
 						
 					} else {

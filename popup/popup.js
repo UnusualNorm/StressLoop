@@ -20,4 +20,8 @@ document.getElementById("Submit").onclick = function(){
     console.log("Url = " + URL)
     window.open(URL,'_blank');
 
-}
+};
+
+document.getElementById("Settings").onclick = function(){
+    window.open("settings.html",'_blank');
+};
