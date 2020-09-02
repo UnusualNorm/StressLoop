@@ -16,6 +16,10 @@
     ],
     "persistent": true
   },
+  "browser_action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Currently Destroying the Interwebs."
+  },
   "content_scripts": [
     {
       "matches": [
