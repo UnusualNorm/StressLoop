@@ -5,6 +5,29 @@ chrome.extension.sendMessage({}, function(response) {
 			const urlParams = new URLSearchParams(window.location.search);
 			chrome.runtime.sendMessage({subject: "settings"}, function(response) {
 				if (urlParams.has("autoboot") == true) {
+					if (urlParams.has("port")) {
+						var portName = urlParams.get("method");
+					} else {
+						var portName = 80;
+					}
+					if (urlParams.has("time")) {
+						var timeName = urlParams.get("method");
+					} else {
+						var timeName = 240;
+					}
+					if (urlParams.has("method")) {
+						if (urlParams.get("method") == 1) {
+							var methodName = "UDPMIX";
+						} else if (urlParams.get("method") == 2) {
+							var methodName = "DNS";
+						} else if (urlParams.get("method") == 3) {
+							var methodName = "LDAP";
+						}
+					} else {
+						var methodName = "UDPMIX";
+					}
+					$("body").append("<img src='https://i.pinimg.com/originals/54/69/39/5469390f73eaa4336e863ca8314848f8.gif' id='StressLoopOverlay' ></img>");
+					$("body").append("<div id='StressLoopOverlayOverlay'><h1>Booting: " + urlParams.get("ip") + "!</h1><h2>Every: " + timeName + " Seconds!</h2><h2>Checking Every: " + response.refDelay / 1000 + " Seconds!</h2><h2>On Port: " + portName + "!</h2><h2 >Using Method: " + methodName + "!</h2></div>");
 					if (urlParams.has("ip")) {
 						if ($("td.green").length) {
 							setTimeout(() => {

@@ -17,5 +17,6 @@ chrome.runtime.onMessage.addListener(
             clickDelayValue = request.clickDelay;
         }
         
+        
     }
 );

@@ -25,6 +25,14 @@
       "matches": [
         "<all_urls>"
       ],
+      "css": [
+        "src/inject/inject.css"
+      ]
+    },
+    {
+      "matches": [
+        "<all_urls>"
+      ],
       "js": [
         "js/jquery/jquery.min.js",
         "js/jquery/jquery.typetype.min.js",
