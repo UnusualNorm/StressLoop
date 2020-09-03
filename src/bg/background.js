@@ -16,7 +16,14 @@ chrome.runtime.onMessage.addListener(
             startDelayValue = request.startDelay;
             clickDelayValue = request.clickDelay;
         }
-        
+        if (request.subject == "recentAttack") {
+            sendResponse({
+                ip: "0.0.0.0",
+                port: "",
+                time: "0.0.0.0",
+                method: "0.0.0.0"
+            });
+        }
         
     }
 );
