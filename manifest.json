@@ -41,6 +41,7 @@
     }
   ],
   "web_accessible_resources": [
-    "images/LoopAnim.gif"
+    "images/LoopAnim.gif",
+    "popup/popup.html"
   ]
 }
