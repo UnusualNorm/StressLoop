@@ -26,7 +26,7 @@ chrome.extension.sendMessage({}, function(response) {
 					} else {
 						var methodName = "UDPMIX";
 					}
-					$("body").append("<img src='https://i.pinimg.com/originals/54/69/39/5469390f73eaa4336e863ca8314848f8.gif' id='StressLoopOverlay' ></img>");
+					$("body").append("<img src='" + chrome.extension.getURL('images/LoopAnim.gif') + "' id='StressLoopOverlay' ></img>");
 					$("body").append("<div id='StressLoopOverlayOverlay'><h1>Booting: " + urlParams.get("ip") + "!</h1><h2>Every: " + timeName + " Seconds!</h2><h2>Checking Every: " + response.refDelay / 1000 + " Seconds!</h2><h2>On Port: " + portName + "!</h2><h2 >Using Method: " + methodName + "!</h2></div>");
 					if (urlParams.has("ip")) {
 						if ($("td.green").length) {
