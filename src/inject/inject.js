@@ -34,7 +34,7 @@ chrome.extension.sendMessage({}, function(response) {
 						var methodName = "UDPMIX";
 					}
 					$("body").append("<img src='" + chrome.extension.getURL('images/LoopAnim.gif') + "' id='StressLoopOverlay' ></img>");
-					$("body").append(`<div id='StressLoopOverlayOverlay'><h1>Booting: ${urlParams.get("ip")}!</h1><h2>Every: ${timeName} Seconds!</h2><h2>Checking Every: ${response.refDelay / 1000} Seconds!</h2><h2>On Port: ${portName}!</h2><h2 >Using Method: ${methodName}!</h2><button onclick='top.location.href="https://www.stressthem.to/booter?stopautoboot";'>Stop Loop And Finish</button></div>`);
+					$("body").append(`<div id='StressLoopOverlayOverlay'><h1>Booting: ${urlParams.get("ip")}!</h1><h2>Every: ${timeName} Seconds!</h2><h2>Checking Every: ${response.refDelay / 1000} Seconds!</h2><h2>On Port: ${portName}!</h2><h2 >Using Method: ${methodName}!</h2><button onclick='top.location.href="https://www.stressthem.to/booter?stopautoboot";'>Stop Attack</button></div>`);
 					if (urlParams.has("ip")) {
 						if ($("td.green").length) {
 							setTimeout(() => {
