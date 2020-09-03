@@ -9,11 +9,13 @@ chrome.runtime.onMessage.addListener(
             refDelay: refDelayValue,
             startDelay: startDelayValue,
             clickDelay: clickDelayValue
-        });}
+        });
+        }
         if (request.subject == "updateSettings") {
             refDelayValue = request.refDelay;
             startDelayValue = request.startDelay;
             clickDelayValue = request.clickDelay;
         }
+        
     }
 );
