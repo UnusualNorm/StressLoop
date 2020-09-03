@@ -16,6 +16,6 @@ chrome.runtime.sendMessage({subject: "settings"}, function(response) {
             startDelay: document.getElementById("startDelay").value * 1000,
             clickDelay: document.getElementById("clickDelay").value * 1000
         });
-        
+        alert("Saved Settings!")
     };
 });

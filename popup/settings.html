@@ -4,32 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Settings</title>
+    <style>
+        body {
+          background-image: url('https://wallpapercave.com/wp/wp5405231.jpg');
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          background-size: cover;
+        }
+        </style>
 </head>
 <body>
-    <h1>SETTINGS:</h1>
-    <h2>Delays</h2>
+    <h1 style="color:#FF37F3";>SETTINGS:</h1>
+    <h2 style="color:#FF37F3";>Delays</h2>
     <br>
-    <h3>(Change if you know what you are doing or have lag)</h3>
+    <h3 style="color:#FF37F3";>(Change if you know what you are doing or have lag)</h3>
     <br>
-    <h5>Refresh Delay During Attack</h5>
+    <h5 style="color:#FF37F3";>Refresh Delay During Attack</h5>
     <br>
-    <input id="refDelay" type="number">
-    <br>
-    <br>
-    <h5>Refresh Delay On Start Of Attack</h5>
-    <br>
-    <input id="startDelay" type="number">
+    <input style="color:#FF37F3" id="refDelay" type="number">
     <br>
     <br>
-    <h5>Delay To Click Start Button</h5>
+    <h5 style="color:#FF37F3";>Refresh Delay On Start Of Attack</h5>
     <br>
-    <input id="clickDelay" type="number">
+    <input style="color:#FF37F3" id="startDelay" type="number">
     <br>
     <br>
+    <h5 style="color:#FF37F3";>Delay To Click Start Button</h5>
+    <br>
+    <input style="color:#FF37F3" id="clickDelay" type="number">
     <br>
     <br>
     <br>
-    <button width="100" height="100" id="save" type="button">Save Changes</button>
+    <br>
+    <br>
+    <button style="color:#FFFFFF" id="save" class="Save1" type="button">Save Changes</button>
+    <style>
+      .Save1 {
+        background-color: #FF37F3;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+  </style>
     <script type="text/javascript" src="settings.js"></script>
 </body>
 </html>
