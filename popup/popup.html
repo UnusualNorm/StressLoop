@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/w3/w3.css">
+    <link rel="stylesheet" href="/css/fonts/Grandstander.css">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div style="width: 330px; height: 250px;">
+
+        <div style="font-family: 'Grandstander', cursive; border:7px solid white" 
+        class="w3-panel w3-topbar w3-bottombar w3-border-purple w3-text-white1 w3-hover-border-deep-purple w3-center w3-padding-16">
+            <p id="hostReq">Enter Host</p>
+            <input class="w3-input w3-hover-grey" type="text" id="hostInput" placeholder="Required">
+        </div>
+
+        <div style="font-family: 'Grandstander', cursive; border:7px solid white" 
+        class="w3-panel w3-topbar w3-bottombar w3-border-purple w3-text-white1 w3-hover-border-deep-purple w3-center w3-padding-16">
+            <p id="portReq">Enter Port (Default: </p>
+            <input class="w3-input w3-hover-grey" type="number" id="portInput" placeholder="Leave Blank For Default Port">
+        </div>
+
+        <div style="font-family: 'Grandstander', cursive; border:7px solid white" 
+        class="w3-panel w3-topbar w3-bottombar w3-border-purple w3-text-white1 w3-hover-border-deep-purple w3-center w3-padding-16">
+            <p id="timeReq">Enter Time (Default: </p>
+            <input class="w3-input w3-hover-grey" type="number" id="timeInput" placeholder="Leave Blank For Default Time">
+        </div>
+
+        <div style="font-family: 'Grandstander', cursive; border:7px solid white" 
+        class="w3-panel w3-topbar w3-bottombar w3-border-purple w3-text-white1 w3-hover-border-deep-purple w3-center w3-padding-16">
+            <select class="w3-select" id="methodInput">
+            <option id="methodReq" value="" hidden selected>Enter Method (Default: </option>
+            <option value="udpmix">UDPMIX</option>
+            <option value="dns">DNS</option>
+            <option value="ldap">LDAP</option>
+        </select>
+        </div>
+        
+    <button id="sendAttack" class="w3-button w3-deep-purple w3-round-xxlarge w3-center"><i class="fa fa-refresh"></i> Send Attack</button>
+    </div>
+    <script src="/js/jquery/jquery.min.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html>

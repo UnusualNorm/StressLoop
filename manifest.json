@@ -2,7 +2,7 @@
 "update_url": "https://clients2.google.com/service/update2/crx",
 
   "name": "StressLoop",
-  "version": "0.1.0",
+  "version": "1.0",
   "manifest_version": 2,
   "description": "StressLoop, the internet destroyer!",
   "homepage_url": "http://slimsy.unusualnorm.com/",

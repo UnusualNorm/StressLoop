@@ -17,7 +17,7 @@ var settings = [{
 }, {
     id: 4,
     name: "lastHost",
-    data: 0
+    data: "0.0.0.0"
 }, {
     id: 5,
     name: "lastPort",
