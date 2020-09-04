@@ -13,7 +13,7 @@ var settings = [{
 }, {
     id: 3,
     name: "defaultTime",
-    data: 240
+    data: 300
 }, {
     id: 4,
     name: "lastHost",
@@ -39,7 +39,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             settings: settings
         });
     } else if (request.subject == "updateSettings") {
-        if (settings[request.id].id == request.id && settings[request.id].name == request.name) {
+        if (settings[request.id].name == request.name) {
             settings[request.id].data = request.data;
         }
     }

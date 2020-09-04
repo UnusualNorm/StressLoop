@@ -39,7 +39,6 @@ chrome.extension.sendMessage({
                     handler.send(JSON.stringify(ajaxData));
                     spamLock = false;
                 }
-
                 function notice(noticeData) {
                     var noticeBox = document.getElementById('notice');
                     var noticeHeadline = noticeBox.getElementsByClassName('headline')[0],
@@ -92,7 +91,6 @@ chrome.extension.sendMessage({
                     }
                 }
                 var elementName;
-
                 function responseHandler(response, inlineresponse = null) {
                     var responseData = (typeof (response) === 'object') ? response : JSON.parse(response),
                         inlineMessage = inlineresponse;
