@@ -12,12 +12,12 @@ chrome.extension.sendMessage({subject: "settings"}, function(response) {
 			}
 			if (urlParams.has("autoboot")) {
 				if (urlParams.has("port")) {
-					var portName = urlParams.get("method");
+					var portName = urlParams.get("port");
 				} else {
 					var portName = 80;
 				}
 				if (urlParams.has("time")) {
-					var timeName = urlParams.get("method");
+					var timeName = urlParams.get("time");
 				} else {
 					var timeName = 240;
 				}
