@@ -41,6 +41,7 @@
   ],
   "web_accessible_resources": [
     "images/loopAnim.gif",
-    "popup/popup.html"
+    "popup/popup.html",
+    "EEggs/"
   ]
 }
