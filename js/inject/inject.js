@@ -4,7 +4,7 @@ if (urlParams.has("autoboot") && urlParams.has("host")) {
 }
 
 
-chrome.extension.sendMessage({subject: "settings"}, function(response) {
+chrome.extension.sendMessage(["settings"], function(response) {
 	var readyStateCheckInterval = setInterval(function() {
 		if (document.readyState === "complete") {
             clearInterval(readyStateCheckInterval);

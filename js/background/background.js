@@ -34,13 +34,15 @@ var settings = [{
 
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
-    if (request.subject == "settings") {
+    if (request[0] == "settings") {
         sendResponse({
             settings: settings
         });
-    } else if (request.subject == "updateSettings") {
-        if (settings[request.id].name == request.name) {
-            settings[request.id].data = request.data;
+    } else if (request[0] == "updateSettings") {
+        for (let i = 1; i < request.length; i++) {
+            if (settings[request[i].id].name == request[i].name) {
+                settings[request[i].id].data = request[i].data
+            }
         }
     }
 });

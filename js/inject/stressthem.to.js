@@ -1,6 +1,4 @@
-chrome.extension.sendMessage({
-    subject: "settings"
-}, function (response) {
+chrome.extension.sendMessage(["settings"], function (response) {
     var readyStateCheckInterval = setInterval(function () {
         if (document.readyState === "complete") {
             clearInterval(readyStateCheckInterval);
@@ -136,30 +134,30 @@ chrome.extension.sendMessage({
                         location.reload();
                     }, response.settings[0].data);
                 } else {
-                    chrome.extension.sendMessage({
-                        subject: "updateSettings",
+                    chrome.extension.sendMessage([
+                        "updateSettings",
+                        {
                         id: 4,
                         name: "lastHost",
                         data: urlParams.get("host")
-                    });
-                    chrome.extension.sendMessage({
-                        subject: "updateSettings",
+                        },
+                        {
                         id: 5,
                         name: "lastPort",
                         data: urlParams.get("port")
-                    });
-                    chrome.extension.sendMessage({
-                        subject: "updateSettings",
+                        },
+                        {
                         id: 6,
                         name: "lastTime",
                         data: urlParams.get("time")
-                    });
-                    chrome.extension.sendMessage({
-                        subject: "updateSettings",
+                        },
+                        {
                         id: 7,
                         name: "lastMethod",
                         data: urlParams.get("method")
-                    });
+                        }
+
+                    ]);
                     submitData(JSON.parse(`{\"method_l4\":\"${response.settings[1].data}\",\"options\":null,\"host\":\"\",\"port\":\"${response.settings[2].data}\",\"time\":\"${response.settings[3].data}\"}`));
                     location.reload();
                 }

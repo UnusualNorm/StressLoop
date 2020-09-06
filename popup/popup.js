@@ -1,4 +1,4 @@
-chrome.extension.sendMessage({subject: "settings"}, function(response) {
+chrome.extension.sendMessage(["settings"], function(response) {
     $("#portReq").append(`${response.settings[2].data})`);
     $("#timeReq").append(`${response.settings[3].data})`);
     $("#methodReq").append(`${response.settings[1].data})`);
