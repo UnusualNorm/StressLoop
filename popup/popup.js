@@ -3,7 +3,7 @@ chrome.extension.sendMessage(["settings"], function(response) {
     $("#timeReq").append(`${response.settings[3].data})`);
     $("#methodReq").append(`${response.settings[1].data})`);
     function checkInput(ID, DEFAULTID) {
-        if (document.getElementById(ID).length == "") {
+        if (document.getElementById(ID).value == "") {
             return response.settings[DEFAULTID].data;
         } else {
             return document.getElementById(ID).value;

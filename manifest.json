@@ -12,7 +12,8 @@
   },
   "permissions": [
     "https://www.stressthem.to/",
-    "activeTab"
+    "activeTab",
+    "storage"
   ],
   "background": {
     "scripts": [
@@ -42,6 +43,10 @@
   "web_accessible_resources": [
     "images/loopAnim.gif",
     "popup/popup.html",
-    "EEggs/"
+    "EEggs/pong.html",
+    "EEggs/snake.html",
+    "EEggs/tetris.html",
+    "EEggs/breakout.html",
+    "EEggs/bomberman.html"
   ]
 }
