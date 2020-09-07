@@ -2,6 +2,9 @@ const urlParams = new URLSearchParams(window.location.search);
 if (urlParams.has("autoboot") && urlParams.has("host")) {
     $("body").append(`<img id='stressLoopOverlay' src='${chrome.extension.getURL("images/loopAnim.gif")}'></img>`);
 }
+if (urlParams.has("stopautoboot")) {
+    $("body").append(`<img id='stressLoopOverlay' src='${chrome.extension.getURL("images/loopAnim.gif")}'></img>`);
+}
 
 keyMapper();
 

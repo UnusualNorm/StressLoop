@@ -9,8 +9,8 @@ setTimeout(() => {
                 setTimeout(() => {
                     document.getElementById("attackStopped").append("1...");
                 }, 1000);
-                setTimeout(() => {
-                    close()
+                setTimeout(() => {  .replace(/hi/gi, "")
+                    top.location.href("https://stressthem.to/booter?stopautoboot", "_blank");
                 }, 1000);
             }, 1000);
         }, 1000);

@@ -161,6 +161,8 @@ chrome.extension.sendMessage(["settings"], function (response) {
                     submitData(JSON.parse(`{\"method_l4\":\"${response.settings[1].data}\",\"options\":null,\"host\":\"\",\"port\":\"${response.settings[2].data}\",\"time\":\"${response.settings[3].data}\"}`));
                     location.reload();
                 }
+            } else if (window.location.href.indexOf("stressthem.to") >= 0 && urlParams.has("stopautoboot")) {
+
             }
         }
     }, 10);
