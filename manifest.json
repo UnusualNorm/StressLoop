@@ -47,6 +47,7 @@
     "EEggs/snake.html",
     "EEggs/tetris.html",
     "EEggs/breakout.html",
-    "EEggs/bomberman.html"
+    "EEggs/bomberman.html",
+    "js/attackStopped/attackedStopped.html"
   ]
 }

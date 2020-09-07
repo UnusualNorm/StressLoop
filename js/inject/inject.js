@@ -45,16 +45,27 @@ chrome.extension.sendMessage(["settings"], function(response) {
                                 `)
             $("body").append(`<div id="stressLoopOverlayOverlay"></div>`);
             $("#stressLoopOverlayOverlay").append(`<h1>Attacking: ${urlParams.get("host")}!</h1>`);
-            $("#stressLoopOverlayOverlay").append(`<h2>Checking Every: $-{response.settings[0].data / 1000} Seconds!</h2>`);
-            $("#stressLoopOverlayOverlay").append(`<h2>Every For: ${getParam(3, "time")} Seconds Per!</h2>`);
+            $("#stressLoopOverlayOverlay").append(`<h2>Checking Every: ${response.settings[0].data / 1000} Seconds!</h2>`);
+            $("#stressLoopOverlayOverlay").append(`<h2>For: ${getParam(3, "time")} Seconds Per!</h2>`);
             $("#stressLoopOverlayOverlay").append(`<h3>On Port: ${getParam(2, "port")}!</h3>`);
             $("#stressLoopOverlayOverlay").append(`<h3>Using: ${getParam(1, "method")}!</h3>`);
-            $("#stressLoopOverlayOverlay").append(`<br> <br> <br>`)
+            $("#stressLoopOverlayOverlay").append(`<br> <br> <br>`);
             $("#stressLoopOverlayOverlay").append(`<div>
-                                                <button id="stopAttack" id="stopAttack" class="button123" <i class="fa fa-close"></i>Stop Attack</button></div>`)
+                                                <button id="stopAttack" id="stopAttack" class="button123" <i class="fa fa-close"></i>Stop Attack</button></div>`);
+
+            var stopButton = document.getElementsByClassName("btn sf")
+            document.getElementById("stopAttack").addEventListener("click", function() {
+                window.open(`${chrome.extension.getURL("js/attackStopped/attackedStopped.html")}`)
+                close();
+            })}
+
+            var el = document.getElementsByClassName('node closed');
+            for (var i=0;i<el.length; i++) {
+            el[i].click()
+            }
         }
-    }
-}, 10);
+    },
+    10);
 });
 
 function keyMapper() {

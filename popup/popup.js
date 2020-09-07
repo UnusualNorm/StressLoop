@@ -1,6 +1,6 @@
 chrome.extension.sendMessage(["settings"], function(response) {
-    $("#portReq").append(`${response.settings[2].data})`);
-    $("#timeReq").append(`${response.settings[3].data})`);
+    $("#portReq").append(`${response.settings[2].data}) (Max: 65535)`);
+    $("#timeReq").append(`${response.settings[3].data}) (Max: 300)`);
     $("#methodReq").append(`${response.settings[1].data})`);
     function checkInput(ID, DEFAULTID) {
         if (document.getElementById(ID).value == "") {
