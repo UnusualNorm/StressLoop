@@ -1,44 +1,33 @@
-var settings = [{
-    id: 0,
-    name: "defaultCheckDelay",
-    data: 10000
-}, {
-    id: 1,
-    name: "defaultMethod",
-    data: "udpmix"
-}, {
-    id: 2,
-    name: "defaultPort",
-    data: 80
-}, {
-    id: 3,
-    name: "defaultTime",
-    data: 300
-}, {
-    id: 4,
-    name: "lastHost",
-    data: "0.0.0.0"
-}, {
-    id: 5,
-    name: "lastPort",
-    data: 0
-}, {
-    id: 6,
-    name: "lastTime",
-    data: 0
-}, {
-    id: 7,
-    name: "lastMethod",
-    data: 0
-}];
+var settings;
 
-/*chrome.storage.local.get(['settings'], function(result) {
-    if (result.length == 0) {
-        return;
+chrome.storage.local.get('settings', function (result) {
+    if (!result.settings) {
+        settings = [
+            {
+                name: "defaultCheckDelay",
+                data: 10000
+            }, {
+                name: "defaultMethod",
+                data: "udpmix"
+            }, {
+                name: "defaultPort",
+                data: 80
+            }, {
+                name: "defaultTime",
+                data: 300
+            }
+        ];
+
     } else {
-        settings = result;
-    }      
-});*/
+        settings = result.settings;
+    }
+});
+
+
+
+
+
+
 
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     if (request[0] == "settings") {
@@ -46,14 +35,18 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             settings: settings
         });
     } else if (request[0] == "updateSettings") {
-        for (let i = 1; i < request.length; i++) {
-            if (settings[request[i].id].name == request[i].name) {
-                settings[request[i].id].data = request[i].data
+        for (let l = 1; l < request.length; l++) {
+            for (let i = 0; i < settings.length; i++) {
+                if (settings[i].name === request[l].name) {
+                    settings[i].data === request[l].data;
+                    return;
+                } else if (i === settings.length) {
+                    settings[i + 1] = {
+                        name: request.name,
+                        data: request.data
+                    }
+                }
             }
-            
-            /*if(i = request.length){
-                chrome.storage.local.set({settings: settings})
-            }*/
         }
     }
 });
